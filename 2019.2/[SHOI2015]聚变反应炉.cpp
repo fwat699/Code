@@ -27,7 +27,7 @@ void Add(int a, int b) {
 }
 namespace task1 {
     const int N = 1e5 + 7;
-    int f[N], g[N];//f:�ȼ���ף� 
+    int f[N], g[N];//f:ÏÈ¼¤»î¸¸Ç×£» 
     void dfs(int u, int fa) {
     	int cnt = 0;
     	g[u] = d[u];
@@ -76,9 +76,6 @@ namespace task2 {
 	}
 }
 int main() {
-#ifndef ONLINE_JUDGE
-	freopen("fusion19.in", "r", stdin);
-#endif
     n = gi();
     memset(d, 0xc0, sizeof d);
     rep(i, 1, n) d[i] = gi();
