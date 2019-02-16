@@ -77,7 +77,6 @@ namespace task2 {
 }
 int main() {
     n = gi();
-    memset(d, 0xc0, sizeof d);
     rep(i, 1, n) d[i] = gi();
     rep(i, 1, n) c[i] = gi(), Max(mx, c[i]);
     rep(i, 1, n - 1) Add(gi(), gi());
