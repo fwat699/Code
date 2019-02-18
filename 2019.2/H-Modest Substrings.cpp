@@ -21,7 +21,7 @@ void insert() {
 				rep(j, L[i] + 1, R[i] - 1) ++g[to(u1, j)][l1 - i];
 			}else {
 				rep(j, L[i] + 1, 9) ++g[to(u1, j)][l1 - i];
-				rep(j, 0, R[i] - 1) ++g[to(u2, j)][l2 - i];//
+				rep(j, i == 1 ? 1 : 0, R[i] - 1) ++g[to(u2, j)][l2 - i];//
 			}
 			u1 = to(u1, L[i]);
 			u2 = to(u2, R[i]);
@@ -33,14 +33,13 @@ void insert() {
 			u1 = to(u1, L[i]);
 		}
 		rep(i, 1, l2) {
-			rep(j, 0, R[i] - 1) ++g[to(u2, j)][l2 - i];
+			rep(j, i == 1 ? 1 : 0, R[i] - 1) ++g[to(u2, j)][l2 - i];
 			u2 = to(u2, R[i]);
 		}
 		++g[u1][0], ++g[u2][0];
 		rep(i, l1 + 1, l2 - 1)
 		rep(j, 1, 9) ++g[to(0, j)][i - 1];
 	}
-	ch[0][0] = 0;
 }
 void getfail() {
 	queue<int>Q;
